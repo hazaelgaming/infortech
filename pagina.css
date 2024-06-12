@@ -1,0 +1,36 @@
+#bienvenida {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#pieportada {
+    margin-top: 13%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#preguntas {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#login {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#registrate {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+#mapa {
+    width: 100%;
+    height: 500px;
+    border: 4px solid #000;
+    margin-bottom: 5%;
+}
