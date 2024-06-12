@@ -11,7 +11,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="pagina.css">
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCSThGfqxk3h461GvFUpo3A8RssbTJ3suw&sensor=false&region=ES"></script>
-  <script type="text/javascript" src="mapa.js"></script>
 </head>
 
 <body class="bg-dark">
@@ -20,7 +19,7 @@
 <div>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img src="./img/logoinfortech2.png" alt="Logo" style="width: 40px;" class="rounded-pill"></a>
+      <a href="index.html" class="navbar-brand"><img src="./img/logoinfortech2.png" alt="Logo" style="width: 40px;" class="rounded-pill"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menucollapse">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,20 +29,20 @@
             <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">NUESTRAS SECCIONES</a>
             <ul class="dropdown-menu">
               <li>
-                <a href="PAGINA.html#sobremesa" class="dropdown-item">SOBREMESA</a>
+                <a href="index.html#sobremesa" class="dropdown-item">SOBREMESA</a>
               </li>
               <li>
-                <a href="PAGINA.html#portatil" class="dropdown-item">PORTATIL</a>
+                <a href="index.html#portatil" class="dropdown-item">PORTÁTIL</a>
               </li>
               <li>
-                <a href="PAGINA.html#monitor" class="dropdown-item">MONITOR</a>
+                <a href="index.html#monitor" class="dropdown-item">MONITOR</a>
               </li>
             </ul>
           </li>
         </ul>
         <div class="ms-auto">
           <a href="./LOGIN.html" class="btn btn-outline-info ms-3">Login</a>
-          <a href="./Registrate.html" class="btn btn-outline-warning ms-3">Registrate</a>
+          <a href="./Registrate.html" class="btn btn-outline-warning ms-3">Regístrate</a>
         </div>
       </div>
     </div>
@@ -60,7 +59,7 @@
       Estamos encantados de tenerte aquí, explorando nuestra colección de productos informáticos. Nos emociona ser parte de tu viaje hacia la innovación y la tecnología.
       Así que adelante, adéntrate en nuestro sitio web o visita nuestra tienda física y descubre todo lo que podemos ofrecerte. ¡Disfruta de la tecnología con confianza!
     </p>
-    <a href="./PAGINA.html" class="btn btn-outline-primary mx-auto">Ir a la página principal</a>
+    <a href="index.html" class="btn btn-outline-primary mx-auto">Ir a la página principal</a>
   </div>
 </div>
 
@@ -135,7 +134,7 @@
       <div class="card-body">
         <style>.texto-verde {color: green;}</style>
         <p class="texto-verde">
-          De acuerdo con la normativa vigente, usted tiene derecho a desistir de la compra de cualquier Producto sin penalización alguna en un plazo de 14 días naturales a partir de la         fecha de recepción del mismo.<br><br>
+          De acuerdo con la normativa vigente, usted tiene derecho a desistir de la compra de cualquier Producto sin penalización alguna en un plazo de 14 días naturales a partir de la fecha de recepción del mismo.<br><br>
           Para ejercer su derecho de desistimiento, deberá seguir los siguientes pasos:<br><br>
           Comunicarnos su decisión de desistir de la compra mediante un escrito inequívoco a través de nuestro correo electrónico o formulario de contacto disponibles en el Sitio web.<br>
           Indicar en el escrito el número de pedido, el Producto o Productos que desea devolver y, si lo desea, el motivo de la devolución.<br>
@@ -239,16 +238,36 @@
 
 <script>
   function initMap() {
-    var location = { lat: 40.416775, lng: -3.703790 };
-    var map = new google.maps.Map(document.getElementById("mapa"), {
-      zoom: 12,
-      center: location
+    var ubicaciones = [
+      { nombre: 'Tienda INFORTECH Madrid', lat: 40.416775, lng: -3.703790 },
+      { nombre: 'Tienda INFORTECH Barcelona', lat: 41.3850639, lng: 2.1734035 },
+      { nombre: 'Tienda INFORTECH Valencia', lat: 39.4699075, lng: -0.3762881 },
+      { nombre: 'Tienda INFORTECH Badajoz', lat: 38.878545, lng: -6.970654 },
+      { nombre: 'Tienda INFORTECH Málaga', lat: 36.7213028, lng: -4.4216366 }
+    ];
+
+    var map = new google.maps.Map(document.getElementById('mapa'), {
+      zoom: 6,
+      center: new google.maps.LatLng(40.416775, -3.703790),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-    var marker = new google.maps.Marker({
-      position: location,
-      map: map
+
+    var infowindow = new google.maps.InfoWindow();
+
+    ubicaciones.forEach(function(ubicacion) {
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(ubicacion.lat, ubicacion.lng),
+        map: map,
+        title: ubicacion.nombre
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(ubicacion.nombre);
+        infowindow.open(map, marker);
+      });
     });
   }
+
   window.onload = initMap;
 </script>
 

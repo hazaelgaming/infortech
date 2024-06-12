@@ -19,7 +19,7 @@
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
       <a href="#" class="navbar-brand"><img src="./img/logoinfortech2.png" alt="Logo" style="width: 40px;" class="rounded-pill"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menucollapse">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menucollapse">
@@ -46,6 +46,34 @@
       </div>
     </div>
   </nav>
+</div>
+
+<!-- Offcanvas Navbar -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="#sobremesa" class="nav-link">SOBREMESA</a>
+      </li>
+      <li class="nav-item">
+        <a href="#portatil" class="nav-link">PORTÁTIL</a>
+      </li>
+      <li class="nav-item">
+        <a href="#monitor" class="nav-link">MONITOR</a>
+      </li>
+      <li class="nav-item">
+        <a href="PORTADA.html#preguntas" class="nav-link">Preguntas frecuentes</a>
+      </li>
+    </ul>
+    <div class="mt-3">
+      <a href="./LOGIN.html" class="btn btn-outline-info w-100 mb-2">Login</a>
+      <a href="./Registrate.html" class="btn btn-outline-warning w-100">Regístrate</a>
+    </div>
+  </div>
 </div>
 
 <div class="container bg-dark" id="pagina">
@@ -88,13 +116,13 @@
     <!-- AHORA INCORPORAMOS LAS IMÁGENES-->
     <div class="carousel-inner bg-dark mt-5">
       <div class="carousel-item active">
-        <img src="./img/Setup/setup1.jpg" alt="EJEMPLO" class="d-block" width="100%" height="800px">
+        <img src="./img/Setup/setup1.jpg" alt="EJEMPLO" class="d-block w-100" height="auto">
       </div>
       <div class="carousel-item">
-        <img src="./img/Setup/setup2.jpg" alt="EJEMPLO1" class="d-block" width="100%" height="800px">
+        <img src="./img/Setup/setup2.jpg" alt="EJEMPLO1" class="d-block w-100" height="auto">
       </div>
       <div class="carousel-item">
-        <img src="./img/Setup/setup3.jpg" alt="EJEMPLO2" class="d-block" width="100%" height="800px">
+        <img src="./img/Setup/setup3.jpg" alt="EJEMPLO2" class="d-block w-100" height="auto">
       </div>
     </div>
 
@@ -106,19 +134,14 @@
     </button>
   </div>
 
-  <!-- Aquí acaba el carrusel de imágenes, recordatorio cambiar imágenes-->
   <div class="b-example-divider bg-dark"></div>
 
-  <!--Pasamos con el cuerpo principal-->
   <div class="pt-5 pb-5 text-center bg-dark text-white">
     <h1><b>INFORTECH</b></h1>
     <div class="ps-3 p-3">
       <p class="lead ps-3 p-3">
-        <!-- PONER TEXTO ACORDE A LA PÁGINA -->
         En INFORTECH, estamos comprometidos con la calidad y la satisfacción de nuestros clientes. Por eso, ofrecemos una garantía de 5 años en todos nuestros productos y servicios. Esto significa que puedes estar seguro de que tu inversión está protegida y que recibirás asistencia técnica en caso de que surja algún problema.
-
         Nuestro objetivo principal es brindarte un servicio excepcional y soluciones tecnológicas que te permitan alcanzar tus metas. Nos enfocamos en comprender tus necesidades específicas y desarrollar soluciones personalizadas que se adapten a tu presupuesto y requerimientos.
-
         Si estás buscando una empresa de informática confiable y experimentada, no dudes en contactarnos. Nuestro equipo de expertos estará encantado de asesorarlo y brindarte la mejor solución para tus necesidades tecnológicas.
       </p>
     </div>
@@ -176,6 +199,7 @@
           <div class="card-body">
             <h5 class="card-title">Ready Intel Core i5-12400F / 32GB / 1TB SSD / RTX 4060 Ti + Windows 11 Home</h5>
             <p class="card-text">Cod.Articulo 112233</p>
+            <p class="card-text">Precio: 850€</p>
             <div id="colorpc" class="row mt-3 mb-3 p-1">
               <h6>Selección de modelo</h6>
               <div class="col-4">
@@ -206,7 +230,7 @@
             </div>
             <div class="px-1 pt-3 float-end">
               <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-              <button type="button" class="bg-success" onclick="agregarAlCarrito('Ready Intel Core i5-12400F', 112233)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Ready Intel Core i5-12400F', 112233, 850)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
             </div>
           </div>
         </div>
@@ -218,6 +242,7 @@
           <div class="card-body">
             <h5 class="card-title">Imperial AMD Ryzen 7 7800X3D / 32GB / 2TB SSD / RTX 4070 Ti Super + Windows 11 Home</h5>
             <p class="card-text">Cod.Articulo 332211</p>
+            <p class="card-text">Precio: 640€</p>
             <div id="colorpc" class="row mt-3 mb-3 p-1">
               <h6>Selección de modelo</h6>
               <div class="col-4">
@@ -248,7 +273,7 @@
             </div>
             <div class="px-1 pt-3 float-end">
               <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-              <button type="button" class="bg-success" onclick="agregarAlCarrito('Imperial AMD Ryzen 7 7800X3D', 332211)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Imperial AMD Ryzen 7 7800X3D', 332211, 640)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
             </div>
           </div>
         </div>
@@ -260,6 +285,50 @@
           <div class="card-body">
             <h5 class="card-title">Work AMD Ryzen 7 5700G/16GB/500GB SSD + Windows 11 Home</h5>
             <p class="card-text">Cod.Articulo 998877</p>
+            <p class="card-text">Precio: 880€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="                <form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
+              </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su RAM:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">RAM</option>
+                <option>8 GB</option>
+                <option>16 GB</option>
+                <option>32 GB</option>
+                <option>64 GB</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Work AMD Ryzen 7 5700G', 998877, 880)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 4 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Sobremesa/torre7.webp" class="card-img-top p-2 border border-3" alt="Imagen del PC">
+          <div class="card-body">
+            <h5 class="card-title">Ordenador Sobremesa PcCom Studio Intel Core i7-14700KF / 32GB / 2TB SSD / RTX 4070 Super + Windows 1</h5>
+            <p class="card-text">Cod.Articulo 123456</p>
+            <p class="card-text">Precio: 1020€</p>
             <div id="colorpc" class="row mt-3 mb-3 p-1">
               <h6>Selección de modelo</h6>
               <div class="col-4">
@@ -290,7 +359,228 @@
             </div>
             <div class="px-1 pt-3 float-end">
               <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-              <button type="button" class="bg-success" onclick="agregarAlCarrito('Work AMD Ryzen 7 5700G', 998877)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('PcCom Studio Intel Core i7-14700KF', 123456, 1020)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 5 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Sobremesa/torre9.jpeg" class="card-img-top p-2 border border-3" alt="Imagen del PC">
+          <div class="card-body">
+            <h5 class="card-title">Imperial AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4070 - Negro + Windows 11 Home</h5>
+            <p class="card-text">Cod.Articulo 112234</p>
+            <p class="card-text">Precio: 550€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
+              </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su RAM:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">RAM</option>
+                <option>8 GB</option>
+                <option>16 GB</option>
+                <option>32 GB</option>
+                <option>64 GB</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Imperial AMD Ryzen 7 5800X - Negro', 112234, 550)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 6 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Sobremesa/torre3.jpeg" class="card-img-top p-2 border border-3" alt="Imagen del PC">
+          <div class="card-body">
+            <h5 class="card-title">Imperial AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4070 - Blanco</h5>
+            <p class="card-text">Cod.Articulo 443322</p>
+            <p class="card-text">Precio: 2150€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
+              </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su RAM:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">RAM</option>
+                <option>8 GB</option>
+                <option>16 GB</option>
+                <option>32 GB</option>
+                <option>64 GB</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Imperial AMD Ryzen 7 5800X - Blanco', 443322, 2150)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="b-example-divider bg-dark">&nbsp;</div>
+    
+    <!-- Sección de productos portátiles -->
+    <div class="row justify-content-center" id="portatil">
+      <!-- Producto 1 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Portatiles/laptop1.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
+          <div class="card-body">
+            <h5 class="card-title">Gigabyte G5 KF5-53ES353SH Intel Core i5-13500H/16GB/512GB SSD/RTX 4060/15.6"</h5>
+            <p class="card-text">Cod.Articulo 998767</p>
+            <p class="card-text">Precio: 760€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
+              </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Kit Limpieza</option>
+                <option>Kit Reparación</option>
+                <option>Soporte Técnico</option>
+                <option>Kit Teclado y Ratón</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Gigabyte G5 KF5-53ES353SH', 998767, 760)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 2 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Portatiles/laptop2.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
+          <div class="card-body">
+            <h5 class="card-title">HP Victus 15-fb1002ns AMD Ryzen 5 7535HS/16GB/512GB SSD/RTX 2050/15.6"</h5>
+            <p class="card-text">Cod.Articulo 323456</p>
+            <p class="card-text">Precio: 330€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
+              </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Kit Limpieza</option>
+                <option>Kit Reparación</option>
+                <option>Soporte Técnico</option>
+                <option>Kit Teclado y Ratón</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('HP Victus 15-fb1002ns', 323456, 330)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 3 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Portatiles/laptop3.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
+          <div class="card-body">
+            <h5 class="card-title">MSI Thin GF63 12UC-688XES Intel Core i7-12650H/16GB/1TB SSD/RTX 3050/15.6"</h5>
+            <p class="card-text">Cod.Articulo 994583</p>
+            <p class="card-text">Precio: 850€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
+              </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Kit Limpieza</option>
+                <option>Kit Reparación</option>
+                <option>Soporte Técnico</option>
+                <option>Kit Teclado y Ratón</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('MSI Thin GF63 12UC-688XES', 994583, 850)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
             </div>
           </div>
         </div>
@@ -298,706 +588,468 @@
       <!-- Producto 4 -->
       <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
         <div class="card bg-dark text-white border border-3">
-          <img src="./img/Sobremesa/torre7.webp" class="card-img-top p-2 border border-3" alt="Imagen del PC">
+          <img src="./img/Portatiles/laptop4.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
           <div class="card-body">
-            <h5 class="card-title">Ordenador Sobremesa PcCom Studio Intel Core i7-14700KF / 32GB / 2TB SSD / RTX 4070 Super + Windows 1</h5>
-            <p class="card-text">Cod.Articulo 123456</p>
-            <div id          ="colorpc" class="row mt-3 mb-3 p-1">
-                <h6>Selección de modelo</h6>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                  </label>
-                </div>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                  </label>
-                </div>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                  </label>
-                </div>
+            <h5 class="card-title">ASUS TUF Gaming F17 FX707VI-HX040 Intel Core i7-13620H/32GB/1TB SSD/RTX 4070/17.3''</h5>
+            <p class="card-text">Cod.Articulo 773366</p>
+            <p class="card-text">Precio: 550€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
               </div>
-              <div id="talla py-5">
-                <p>Seleccione su RAM:</p>
-                <select class="form-select form-select-sm px-2 py-1 w-auto">
-                  <option class="active disabled">RAM</option>
-                  <option>8 GB</option>
-                  <option>16 GB</option>
-                  <option>32 GB</option>
-                  <option>64 GB</option>
-                </select>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
               </div>
-              <div class="px-1 pt-3 float-end">
-                <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                <button type="button" class="bg-success" onclick="agregarAlCarrito('PcCom Studio Intel Core i7-14700KF', 123456)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
               </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Kit Limpieza</option>
+                <option>Kit Reparación</option>
+                <option>Soporte Técnico</option>
+                <option>Kit Teclado y Ratón</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('ASUS TUF Gaming F17 FX707VI-HX040', 773366, 550)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
             </div>
           </div>
         </div>
-        <!-- Producto 5 -->
-        <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-          <div class="card bg-dark text-white border border-3">
-            <img src="./img/Sobremesa/torre9.jpeg" class="card-img-top p-2 border border-3" alt="Imagen del PC">
-            <div class="card-body">
-              <h5 class="card-title">Imperial AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4070 - Negro + Windows 11 Home</h5>
-              <p class="card-text">Cod.Articulo 112234</p>
-              <div id="colorpc" class="row mt-3 mb-3 p-1">
-                <h6>Selección de modelo</h6>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                  </label>
-                </div>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                  </label>
-                </div>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                  </label>
-                </div>
+      </div>
+      <!-- Producto 5 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Portatiles/laptop5.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
+          <div class="card-body">
+            <h5 class="card-title">Acer Nitro V 15 ANV15-51 Intel Core i5-13420H/16GB/1TB SSD/RTX 4060/15.6"</h5>
+            <p class="card-text">Cod.Articulo 664450</p>
+            <p class="card-text">Precio: 540€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
               </div>
-              <div id="talla py-5">
-                <p>Seleccione su RAM:</p>
-                <select class="form-select form-select-sm px-2 py-1 w-auto">
-                  <option class="active disabled">RAM</option>
-                  <option>8 GB</option>
-                  <option>16 GB</option>
-                  <option>32 GB</option>
-                  <option>64 GB</option>
-                </select>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
               </div>
-              <div class="px-1 pt-3 float-end">
-                <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                <button type="button" class="bg-success" onclick="agregarAlCarrito('Imperial AMD Ryzen 7 5800X - Negro', 112234)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
               </div>
+            </div>
+            <div id="talla py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Kit Limpieza</option>
+                <option>Kit Reparación</option>
+                <option>Soporte Técnico</option>
+                <option>Kit Teclado y Ratón</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Acer Nitro V 15 ANV15-51', 664450, 540)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
             </div>
           </div>
         </div>
-        <!-- Producto 6 -->
-        <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-          <div class="card bg-dark text-white border border-3">
-            <img src="./img/Sobremesa/torre3.jpeg" class="card-img-top p-2 border border-3" alt="Imagen del PC">
-            <div class="card-body">
-              <h5 class="card-title">Imperial AMD Ryzen 7 5800X / 32GB / 1TB SSD / RTX 4070 - Blanco</h5>
-              <p class="card-text">Cod.Articulo 443322</p>
-              <div id="colorpc" class="row mt-3 mb-3 p-1">
-                <h6>Selección de modelo</h6>
-                <div class="col-4">
-                  <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                  </label>
-                </div>
-                <div class="col-            4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                    </label>
-                  </div>
-                </div>
-                <div id="talla py-5">
-                  <p>Seleccione su RAM:</p>
-                  <select class="form-select form-select-sm px-2 py-1 w-auto">
-                    <option class="active disabled">RAM</option>
-                    <option>8 GB</option>
-                    <option>16 GB</option>
-                    <option>32 GB</option>
-                    <option>64 GB</option>
-                  </select>
-                </div>
-                <div class="px-1 pt-3 float-end">
-                  <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                  <button type="button" class="bg-success" onclick="agregarAlCarrito('Imperial AMD Ryzen 7 5800X - Blanco', 443322)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                </div>
+      </div>
+      <!-- Producto 6 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Portatiles/laptop6.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
+          <div class="card-body">
+            <h5 class="card-title">MSI Katana 17 B13VGK-693XES Intel Core i7-13700H/32GB/1TB SSD/RTX 4070/17.3"</h5>
+            <p class="card-text">Cod.Articulo 445500</p>
+            <p class="card-text">Precio: 765€</p>
+            <div id="colorpc" class="row mt-3 mb-3 p-1">
+              <h6>Selección de modelo</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
+                </label>
               </div>
             </div>
+            <div id="talla py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Kit Limpieza</option>
+                <option>Kit Reparación</option>
+                <option>Soporte Técnico</option>
+                <option>Kit Teclado y Ratón</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('MSI Katana 17 B13VGK-693XES', 445500, 765)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
           </div>
-          <!-- Añadimos más productos de sobremesa según sea necesario -->
         </div>
-      
-        <div class="b-example-divider bg-dark">&nbsp;</div>
-      
-        <!-- Sección de productos portátiles -->
-        <div class="row justify-content-center" id="portatil">
-          <!-- Producto 1 -->
-          <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-            <div class="card bg-dark text-white border border-3">
-              <img src="./img/Portatiles/laptop1.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
-              <div class="card-body">
-                <h5 class="card-title">Gigabyte G5 KF5-53ES353SH Intel Core i5-13500H/16GB/512GB SSD/RTX 4060/15.6"</h5>
-                <p class="card-text">Cod.Articulo 998767</p>
-                <div id="colorpc" class="row mt-3 mb-3 p-1">
-                  <h6>Selección de modelo</h6>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                    </label>
-                  </div>
-                </div>
-                <div id="talla py-5">
-                  <p>Seleccione su extra:</p>
-                  <select class="form-select form-select-sm px-2 py-1 w-auto">
-                    <option class="active disabled">Extras</option>
-                    <option>Kit Limpieza</option>
-                    <option>Kit Reparación</option>
-                    <option>Soporte Técnico</option>
-                    <option>Kit Teclado y Ratón</option>
-                  </select>
-                </div>
-                <div class="px-1 pt-3 float-end">
-                  <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                  <button type="button" class="bg-success" onclick="agregarAlCarrito('Gigabyte G5 KF5-53ES353SH', 998767)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                </div>
+      </div>
+    </div>
+
+    <div class="b-example-divider bg-dark">&nbsp;</div>
+
+    <!-- Sección de productos de monitores -->
+    <div class="row justify-content-center" id="monitor">
+      <!-- Producto 1 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Monitores/monitor1.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
+          <div class="card-body">
+            <h5 class="card-title">LG 27GR95QE-B 26.5" OLED QHD 240Hz G-Sync Compatible</h5>
+            <p class="card-text">Cod.Articulo 345643</p>
+            <p class="card-text">Precio: 450€</p>
+            <div id="colormonitor" class="row mt-3 mb-3 p-1">
+              <h6>Seleccione el modelo:</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
+                </label>
+              </div>
+            </div>
+            <div id="mon py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Seguro Rotura</option>
+                <option>Seguro Antirobo</option>
+                <option>Montaje y Anclaje</option>
+                <option>Configuración extra</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('LG 27GR95QE-B', 345643, 450)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 2 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Monitores/monitor2.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
+          <div class="card-body">
+            <h5 class="card-title">Krom Kertz RGB 23.8" LED FullHD 200Hz G-Sync Compatible</h5>
+            <p class="card-text">Cod.Articulo 443344</p>
+            <p class="card-text">Precio: 440€</p>
+            <div id="colormonitor" class="row mt-3 mb-3 p-1">
+              <h6>Seleccione el modelo:</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
+                </label>
+              </div>
+            </div>
+            <div id="mon py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Seguro Rotura</option>
+                <option>Seguro Antirobo</option>
+                <option>Montaje y Anclaje</option>
+                <option>Configuración extra</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Krom Kertz RGB', 443344, 440)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 3 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Monitores/monitor3.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
+          <div class="card-body">
+            <h5 class="card-title">MSI G274F 27" LED Rapid IPS FullHD 180Hz G-Sync Compatible</h5>
+            <p class="card-text">Cod.Articulo 998800</p>
+            <p class="card-text">Precio: 540€</p>
+            <div id="colormonitor" class="row mt-3 mb-3 p-1">
+              <h6>Seleccione el modelo:</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
+                </label>
+              </div>
+            </div>
+            <div id="mon py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Seguro Rotura</option>
+                <option>Seguro Antirobo</option>
+                <option>Montaje y Anclaje</option>
+                <option>Configuración extra</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('MSI G274F', 998800, 540)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 4 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Monitores/monitor4.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
+          <div class="card-body">
+            <h5 class="card-title">Alurin CoreVision 27 FHD 27" LED IPS FullHD 100Hz</h5>
+            <p class="card-text">Cod.Articulo 990099</p>
+            <p class="card-text">Precio: 555€</p>
+            <div id="colormonitor" class="row mt-3 mb-3 p-1">
+              <h6>Seleccione el modelo:</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
+                </label>
+              </div>
+            </div>
+            <div id="mon py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Seguro Rotura</option>
+                <option>Seguro Antirobo</option>
+                <option>Montaje y Anclaje</option>
+                <option>Configuración extra</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Alurin CoreVision 27 FHD', 990099, 555)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 5 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Monitores/monitor5.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
+          <div class="card-body">
+            <h5 class="card-title">Philips E Line 346E2CUAE/00 34" LED WQHD+ 100Hz FreeSync</h5>
+            <p class="card-text">Cod.Articulo 445344</p>
+            <p class="card-text">Precio: 765€</p>
+            <div id="colormonitor" class="row mt-3 mb-3 p-1">
+              <h6>Seleccione el modelo:</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
+                </label>
+              </div>
+            </div>
+            <div id="mon py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Seguro Rotura</option>
+                <option>Seguro Antirobo</option>
+                <option>Montaje y Anclaje</option>
+                <option>Configuración extra</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('Philips E Line 346E2CUAE/00', 445344, 765)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Producto 6 -->
+      <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
+        <div class="card bg-dark text-white border border-3">
+          <img src="./img/Monitores/monitor6.jpeg" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
+          <div class="card-body">
+            <h5 class="card-title">ASUS ROG Swift OLED PG32UCDM 31.5" QD-OLED UltraHD 4K 240Hz</h5>
+            <p class="card-text">Cod.Articulo 001192</p>
+            <p class="card-text">Precio: 345€</p>
+            <div id="colormonitor" class="row mt-3 mb-3 p-1">
+              <h6>Seleccione el modelo:</h6>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
+                </label>
+              </div>
+              <div class="col-4">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
+                </label>
+              </div>
+            </div>
+            <div id="mon py-5">
+              <p>Seleccione su extra:</p>
+              <select class="form-select form-select-sm px-2 py-1 w-auto">
+                <option class="active disabled">Extras</option>
+                <option>Seguro Rotura</option>
+                <option>Seguro Antirobo</option>
+                <option>Montaje y Anclaje</option>
+                <option>Configuración extra</option>
+              </select>
+            </div>
+            <div class="px-1 pt-3 float-end">
+              <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
+              <button type="button" class="bg-success" onclick="agregarAlCarrito('ASUS ROG Swift OLED PG32UCDM', 1192, 345)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="b-example-divider bg-dark">&nbsp;</div>
+    
+    <!-- CREAMOS UNA BARRA LATERAL -->
+    <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasCarrito">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Cesta</h1>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div id="carritoProductos" class="list-group"></div>
+        <div id="pieoffcanvas" style="margin-top: 20px; text-align: center;">
+          <button class="btn btn-outline-danger" style="width:49%" onclick="vaciarCarrito()">Vaciar carrito</button>
+          <button class="btn btn-outline-success" style="width:49%" onclick="irATramitacion()">Continuar</button>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="text-center text-white" style="background-color: #1d26ad;">
+      <div class="container p-4">
+        <section class="">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+              <div class="ratio ratio-16x9">
+                <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/80ttCfQCc_c?si=z4KNUdF_swB9QvQ7" title="YouTube video" allowfullscreen></iframe>
               </div>
             </div>
           </div>
-          <!-- Producto 2 -->
-          <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-            <div class="card bg-dark text-white border border-3">
-              <img src="./img/Portatiles/laptop2.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
-              <div class="card-body">
-                <h5 class="card-title">HP Victus 15-fb1002ns AMD Ryzen 5 7535HS/16GB/512GB SSD/RTX 2050/15.6"</h5>
-                <p class="card-text">Cod.Articulo 323456</p>
-                <div id="colorpc" class="row mt-3 mb-3 p-1">
-                  <h6>Selección de modelo</h6>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                    </label>
-                  </div>
-                </div>
-                <div id="talla py-5">
-                  <p>Seleccione su extra:</p>
-                  <select class="form-select form-select-sm px-2 py-1 w-auto">
-                    <option class="active disabled">Extras</option>
-                    <option>Kit Limpieza</option>
-                    <option>Kit Reparación</option>
-                    <option>Soporte Técnico</option>
-                    <option>Kit Teclado y Ratón</option>
-                  </select>
-                </div>
-                <div class="px-1 pt-3 float-end">
-                  <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                  <button type="button" class="bg-success" onclick="agregarAlCarrito('HP Victus 15-fb1002ns', 323456)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                </div>
-              </div>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        &copy; 2024 Copyright
+      </div>
+    </footer>
+    
+    <script>
+      const carrito = [];
+    
+      function agregarAlCarrito(nombreProducto, codigoProducto, precioProducto) {
+        const producto = { nombre: nombreProducto, codigo: codigoProducto, precio: precioProducto };
+        carrito.push(producto);
+        actualizarCarrito();
+        mostrarCarrito();
+      }
+    
+      function eliminarDelCarrito(indice) {
+        carrito.splice(indice, 1);
+        actualizarCarrito();
+      }
+    
+      function vaciarCarrito() {
+        carrito.length = 0;
+        actualizarCarrito();
+      }
+    
+      function actualizarCarrito() {
+        const carritoProductos = document.getElementById('carritoProductos');
+        carritoProductos.innerHTML = '';
+        let total = 0;
+    
+        carrito.forEach((producto, index) => {
+          total += producto.precio;
+          const item = document.createElement('div');
+          item.className = 'list-group-item list-group-item-action bg-dark text-white border-light';
+          item.innerHTML = `
+            <div class="d-flex justify-content-between">
+              <h5>${producto.nombre}</h5>
+              <button class="btn btn-outline-danger btn-sm" onclick="eliminarDelCarrito(${index})">Eliminar</button>
             </div>
-          </div>
-          <!-- Producto 3 -->
-          <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-            <div class="card bg-dark text-white border border-3">
-              <img src="./img/Portatiles/laptop3.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
-              <div class="card-body">
-                <h5 class="card-title">MSI Thin GF63 12UC-688XES Intel Core i7-12650H/16GB/1TB SSD/RTX 3050/15.6"</h5>
-                <p class="card-text">Cod.Articulo 994583</p>
-                <div id="colorpc" class="row mt-3 mb-3 p-1">
-                  <h6>Selección de modelo</h6>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                    </label>
-                  </div>
-                  <div class="col-4">
-                    <label class="form-check-label">
-                      <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                    </label>
-                  </div>
-                </div>
-                <div id="talla py-5">
-                  <p>Seleccione su extra:</p>
-                  <select class="form-select form-select-sm px-2 py-1 w-auto">
-                    <option class="active disabled">Extras</option>
-                    <option>Kit Limpieza</option>
-                    <option>Kit Reparación</option>
-                    <option>Soporte Técnico</option>
-                    <option>Kit Teclado y Ratón</option>
-                  </select>
-                </div>
-                <div class="px-1 pt-3          float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('MSI Thin GF63 12UC-688XES', 994583)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 4 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Portatiles/laptop4.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
-                <div class="card-body">
-                  <h5 class="card-title">ASUS TUF Gaming F17 FX707VI-HX040 Intel Core i7-13620H/32GB/1TB SSD/RTX 4070/17.3''</h5>
-                  <p class="card-text">Cod.Articulo 773366</p>
-                  <div id="colorpc" class="row mt-3 mb-3 p-1">
-                    <h6>Selección de modelo</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                      </label>
-                    </div>
-                  </div>
-                  <div id="talla py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Kit Limpieza</option>
-                      <option>Kit Reparación</option>
-                      <option>Soporte Técnico</option>
-                      <option>Kit Teclado y Ratón</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('ASUS TUF Gaming F17 FX707VI-HX040', 773366)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Portatiles/laptop5.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
-                <div class="card-body">
-                  <h5 class="card-title">Acer Nitro V 15 ANV15-51 Intel Core i5-13420H/16GB/1TB SSD/RTX 4060/15.6"</h5>
-                  <p class="card-text">Cod.Articulo 664450</p>
-                  <div id="colorpc" class="row mt-3 mb-3 p-1">
-                    <h6>Selección de modelo</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                      </label>
-                    </div>
-                  </div>
-                  <div id="talla py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Kit Limpieza</option>
-                      <option>Kit Reparación</option>
-                      <option>Soporte Técnico</option>
-                      <option>Kit Teclado y Ratón</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('Acer Nitro V 15 ANV15-51', 664450)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 6 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Portatiles/laptop6.webp" class="card-img-top p-2 border border-3" alt="Imagen del portátil">
-                <div class="card-body">
-                  <h5 class="card-title">MSI Katana 17 B13VGK-693XES Intel Core i7-13700H/32GB/1TB SSD/RTX 4070/17.3"</h5>
-                  <p class="card-text">Cod.Articulo 445500</p>
-                  <div id="colorpc" class="row mt-3 mb-3 p-1">
-                    <h6>Selección de modelo</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="SO"> Sin Sistema Operativo
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="Windows"> Windows 11 Home
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="windows"> Windows 11 PRO
-                      </label>
-                    </div>
-                  </div>
-                  <div id="talla py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Kit Limpieza</option>
-                      <option>Kit Reparación</option>
-                      <option>Soporte Técnico</option>
-                      <option>Kit Teclado y Ratón</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('MSI Katana 17 B13VGK-693XES', 445500)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Añadimos la seccion de portatiles -->
-          </div>
-        
-          <div class="b-example-divider bg-dark">&nbsp;</div>
-        
-          <!-- Sección de productos de monitores -->
-          <div class="row justify-content-center" id="monitor">
-            <!-- Producto 1 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Monitores/monitor1.webp" class="card-img-top p-2 border border-3" alt="        ="Imagen del monitor">
-                <div class="card-body">
-                  <h5 class="card-title">LG 27GR95QE-B 26.5" OLED QHD 240Hz G-Sync Compatible</h5>
-                  <p class="card-text">Cod.Articulo 345643</p>
-                  <div id="colormonitor" class="row mt-3 mb-3 p-1">
-                    <h6>Seleccione el modelo:</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
-                      </label>
-                    </div>
-                  </div>
-                  <div id="mon py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Seguro Rotura</option>
-                      <option>Seguro Antirobo</option>
-                      <option>Montaje y Anclaje</option>
-                      <option>Configuración extra</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('LG 27GR95QE-B', 345643)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 2 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Monitores/monitor2.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
-                <div class="card-body">
-                  <h5 class="card-title">Krom Kertz RGB 23.8" LED FullHD 200Hz G-Sync Compatible</h5>
-                  <p class="card-text">Cod.Articulo 443344</p>
-                  <div id="colormonitor" class="row mt-3 mb-3 p-1">
-                    <h6>Seleccione el modelo:</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
-                      </label>
-                    </div>
-                  </div>
-                  <div id="mon py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Seguro Rotura</option>
-                      <option>Seguro Antirobo</option>
-                      <option>Montaje y Anclaje</option>
-                      <option>Configuración extra</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('Krom Kertz RGB', 443344)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 3 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Monitores/monitor3.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
-                <div class="card-body">
-                  <h5 class="card-title">MSI G274F 27" LED Rapid IPS FullHD 180Hz G-Sync Compatible</h5>
-                  <p class="card-text">Cod.Articulo 998800</p>
-                  <div id="colormonitor" class="row mt-3 mb-3 p-1">
-                    <h6>Seleccione el modelo:</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
-                      </label>
-                    </div>
-                  </div>
-                  <div id="mon py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Seguro Rotura</option>
-                      <option>Seguro Antirobo</option>
-                      <option>Montaje y Anclaje</option>
-                      <option>Configuración extra</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('MSI G274F', 998800)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 4 -->
-            <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-              <div class="card bg-dark text-white border border-3">
-                <img src="./img/Monitores/monitor4.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
-                <div class="card-body">
-                  <h5 class="card-title">Alurin CoreVision 27 FHD 27" LED IPS FullHD 100Hz</h5>
-                  <p class="card-text">Cod.Articulo 990099</p>
-                  <div id="colormonitor" class="row mt-3 mb-3 p-1">
-                    <h6>Seleccione el modelo:</h6>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
-                      </label>
-                    </div>
-                    <div class="col-4">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
-                      </label>
-                    </div>
-                  </div>
-                  <div id="mon py-5">
-                    <p>Seleccione su extra:</p>
-                    <select class="form-select form-select-sm px-2 py-1 w-auto">
-                      <option class="active disabled">Extras</option>
-                      <option>Seguro Rotura</option>
-                      <option>Seguro Antirobo</option>
-                      <option>Montaje y Anclaje</option>
-                      <option>Configuración extra</option>
-                    </select>
-                  </div>
-                  <div class="px-1 pt-3 float-end">
-                    <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                    <button type="button" class="bg-success" onclick="agregarAlCarrito('Alurin CoreVision 27 FHD', 990099)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Producto 5 -->
-            <div class="col-sm-8        col-md-6 col-lg-4 col-xl-3 m-4">
-                <div class="card bg-dark text-white border border-3">
-                  <img src="./img/Monitores/monitor5.webp" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
-                  <div class="card-body">
-                    <h5 class="card-title">Philips E Line 346E2CUAE/00 34" LED WQHD+ 100Hz FreeSync</h5>
-                    <p class="card-text">Cod.Articulo 445344</p>
-                    <div id="colormonitor" class="row mt-3 mb-3 p-1">
-                      <h6>Seleccione el modelo:</h6>
-                      <div class="col-4">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
-                        </label>
-                      </div>
-                      <div class="col-4">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
-                        </label>
-                      </div>
-                    </div>
-                    <div id="mon py-5">
-                      <p>Seleccione su extra:</p>
-                      <select class="form-select form-select-sm px-2 py-1 w-auto">
-                        <option class="active disabled">Extras</option>
-                        <option>Seguro Rotura</option>
-                        <option>Seguro Antirobo</option>
-                        <option>Montaje y Anclaje</option>
-                        <option>Configuración extra</option>
-                      </select>
-                    </div>
-                    <div class="px-1 pt-3 float-end">
-                      <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                      <button type="button" class="bg-success" onclick="agregarAlCarrito('Philips E Line 346E2CUAE/00', 445344)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Producto 6 -->
-              <div class="col-sm-8 col-md-6 col-lg-4 col-xl-3 m-4">
-                <div class="card bg-dark text-white border border-3">
-                  <img src="./img/Monitores/monitor6.jpeg" class="card-img-top p-2 border border-3" alt="Imagen del monitor">
-                  <div class="card-body">
-                    <h5 class="card-title">ASUS ROG Swift OLED PG32UCDM 31.5" QD-OLED UltraHD 4K 240Hz</h5>
-                    <p class="card-text">Cod.Articulo 001192</p>
-                    <div id="colormonitor" class="row mt-3 mb-3 p-1">
-                      <h6>Seleccione el modelo:</h6>
-                      <div class="col-4">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="color1" value="tamano"> 2560 x 1440
-                        </label>
-                      </div>
-                      <div class="col-4">
-                        <label class="form-check-label">
-                          <input type="radio" class="form-check-input" name="color1" value="tamano2"> 3440 x 1440
-                        </label>
-                      </div>
-                    </div>
-                    <div id="mon py-5">
-                      <p>Seleccione su extra:</p>
-                      <select class="form-select form-select-sm px-2 py-1 w-auto">
-                        <option class="active disabled">Extras</option>
-                        <option>Seguro Rotura</option>
-                        <option>Seguro Antirobo</option>
-                        <option>Montaje y Anclaje</option>
-                        <option>Configuración extra</option>
-                      </select>
-                    </div>
-                    <div class="px-1 pt-3 float-end">
-                      <button type="button" class="bg-danger"><img src="./img/GUSTARNUEVO.png" alt="gusta" width="20px" height="20px"></button>
-                      <button type="button" class="bg-success" onclick="agregarAlCarrito('ASUS ROG Swift OLED PG32UCDM', 1192)"><img src="./img/CARRONUEVO.png" alt="cesta" width="20px" height="20px"></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Añadimos más productos de monitores según sea necesario -->
-            </div>
-          
-            <div class="b-example-divider bg-dark">&nbsp;</div>
-          
-            <!-- CREAMOS UNA BARRA LATERAL -->
-            <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasCarrito">
-              <div class="offcanvas-header">
-                <h1 class="offcanvas-title">Cesta</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-              </div>
-              <div class="offcanvas-body">
-                <div id="carritoProductos" class="list-group"></div>
-                <div id="pieoffcanvas" style="margin-top: 20px; text-align: center;">
-                  <button class="btn btn-outline-danger" style="width:49%" onclick="vaciarCarrito()">Vaciar carrito</button>
-                  <button class="btn btn-outline-success" style="width:49%">Continuar</button>
-                </div>
-              </div>
-            </div>
-          
-          <footer class="text-center text-white" style="background-color: #1d26ad;">
-            <div class="container p-4">
-              <section class="">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="ratio ratio-16x9">
-                      <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/80ttCfQCc_c?si=z4KNUdF_swB9QvQ7" title="YouTube video" allowfullscreen></iframe>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-              &copy; 2024 Copyright
-            </div>
-          </footer>
-          
-          <script>
-            const carrito = [];
-          
-            function agregarAlCarrito(nombreProducto, codigoProducto) {
-              const producto = { nombre: nombreProducto, codigo: codigoProducto };
-              carrito.push(producto);
-              actualizarCarrito();
-              mostrarCarrito();
-            }
-          
-            function eliminarDelCarrito(indice) {
-              carrito.splice(indice, 1);
-              actualizarCarrito();
-            }
-          
-            function vaciarCarrito() {
-              carrito.length = 0;
-              actualizarCarrito();
-            }
-          
-            function actualizarCarrito() {
-              const carritoProductos = document.getElementById('carritoProductos');
-              carritoProductos.innerHTML = '';
-          
-              carrito.forEach((producto, index) => {
-                const item = document.createElement('div');
-                item.className = 'list-group-item list-group-item-action bg-dark text-white border-light';
-                item.innerHTML = `
-                  <div class="d-flex justify-content-between">
-                    <h5>${producto.nombre}</h5>
-                    <button class="btn btn-outline-danger btn-sm" onclick="eliminarDelCarrito(${index})">Eliminar</button>
-                  </div>
-                  <p>Código: ${producto.codigo}</p>
-                `;
-                carritoProductos.appendChild(item);
-              });
-            }
-          
-            function mostrarCarrito() {
-              const offcanvasCarrito = new bootstrap.Offcanvas(document.getElementById('offcanvasCarrito'));
-              offcanvasCarrito.show();
-            }
-          
-            $(document).ready(function(){
-              $("#busqueda").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                $("#cuerpo div").filter(function() {
-                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-                });
-              });
-            });
-          </script>
-          
-          </body>
-          </html>
+            <p>Código: ${producto.codigo}</p>
+            <p>Precio: ${producto.precio}€</p>
+          `;
+          carritoProductos.appendChild(item);
+        });
+    
+        const totalItem = document.createElement('div');
+        totalItem.className = 'list-group-item list-group-item-action bg-dark text-white border-light';
+        totalItem.innerHTML = `<h5>Total: ${total}€</h5>`;
+        carritoProductos.appendChild(totalItem);
+      }
+    
+      function mostrarCarrito() {
+        const offcanvasCarrito = new bootstrap.Offcanvas(document.getElementById('offcanvasCarrito'));
+        offcanvasCarrito.show();
+      }
+    
+      function irATramitacion() {
+        // Guardar el carrito en localStorage para recuperarlo en tramitacion.html
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        window.location.href = 'tramitacion.html';
+      }
+    
+      $(document).ready(function(){
+        $("#busqueda").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#cuerpo div").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+    
+  </body>
+</html>

@@ -34,3 +34,25 @@
     border: 4px solid #000;
     margin-bottom: 5%;
 }
+
+/* archivo: pagina.css */
+
+/* Carrusel */
+.carousel-inner img {
+    width: 100%;
+    height: auto; /* Cambiado para mantener la proporción */
+  }
+  
+  /* Offcanvas navbar */
+  .offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Ocultar navbar en dispositivos móviles */
+  @media (max-width: 768px) {
+    .navbar {
+      display: none;
+    }
+  }
